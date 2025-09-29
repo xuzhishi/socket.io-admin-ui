@@ -16,3 +16,4 @@ FROM nginx:1.20.1
 WORKDIR /usr/share/nginx/html
 
 COPY --from=node-builder /app/dist .
+COPY --from=node-builder /app/dist /usr/share/nginx/html/socket.admin

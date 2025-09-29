@@ -3,13 +3,13 @@ FROM node:14-alpine as node-builder
 WORKDIR /app
 
 # Install app dependencies
-COPY package.json .
-RUN npm install
+#COPY package.json .
+#RUN npm install
 
 # Bundle app source
 COPY . .
 
-RUN npm run build
+#RUN npm run build
 
 FROM nginx:1.20.1
 
